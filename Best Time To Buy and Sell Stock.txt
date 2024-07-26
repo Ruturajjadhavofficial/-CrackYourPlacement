@@ -1,0 +1,17 @@
+#include<bits/stdc++.h>
+using namespace std;
+class Solution {
+public:
+    int maxProfit(vector<int>& arr) {
+        int max_profit=0;
+        int mini=INT_MAX;
+        for(int i=0;i<arr.size();i++){
+            mini=min(mini,arr[i]);
+            max_profit=max(max_profit,arr[i]-mini);
+        }
+        return max_profit;
+    }
+};
+
+Leetcode : 121. Best Time to Buy and Sell Stock
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
